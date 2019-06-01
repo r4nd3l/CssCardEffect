@@ -1,0 +1,119 @@
+body{
+  background: url('../img/wall.jpeg') no-repeat 50% 50%;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: Roboto;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card{
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  background: var(--gr-);
+  overflow: hidden;
+  border-radius: 1em;
+  box-shadow: var(--shadow1-);
+}
+
+input,
+.toggle{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: 20px;
+  right: 20px;
+  outline: none;
+  z-index: 10;
+  cursor: pointer;
+}
+
+input{
+  opacity: 0;
+}
+
+.toggle{
+  pointer-events: none;
+  border-radius: 50%;
+  background: var(--rgba-dc-);
+  transition: 0.5s;
+  text-align: center;
+  line-height: 50px;
+  font-size: 36px;
+  box-shadow: 0 0 0 0px var(--rgba-dc-);
+}
+
+.toggle i{
+  vertical-align: middle;
+  font-size: 0.8em;
+  color: orange;
+}
+
+input:checked ~ .toggle{
+  box-shadow: 0 0 0 500px var(--dc-);
+  transform: rotate(225deg);
+}
+
+.imgBx img{
+  object-fit: cover;
+  width: 100%;
+}
+
+.imgBx,
+.details{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.details{
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 11;
+  pointer-events: none;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+input:checked ~ .details{
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+
+.details h2{
+  margin-bottom: 5px;
+  color: #fff;
+}
+.details p{
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* END */
